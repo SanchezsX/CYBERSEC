@@ -38,12 +38,12 @@ const Search = () => {
   return (
     <div
       ref={inputContentRef}
-      className="flex items-center mt-[200px] gap-2 max-[600px]:w-full"
+      className="flex items-center mt-[200px] gap-2 max-[670px]:w-full max-[600px]:mt-[100px]"
     >
       <input
         type="text"
         value={value}
-        placeholder="Search"
+        placeholder="Поиск..."
         className=" w-[600px] h-[60px] focus:outline-none bg-[#282828] text-white px-4 rounded-[8px]"
         onChange={(e) => setValue(e.target.value)}
       />

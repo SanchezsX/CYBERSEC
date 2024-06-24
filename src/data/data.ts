@@ -3,6 +3,7 @@ export const data = [
     id: 1,
     title: "Что такое фишинг и как его распознать?",
     date: "2024-06-23",
+    img: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     author: "Эксперт по безопасности",
     views: 2500,
     content: `
@@ -26,6 +27,7 @@ export const data = [
     id: 2,
     title: "Как защитить свои данные в интернете?",
     date: "2024-06-20",
+    img: 'https://images.unsplash.com/photo-1618060932014-4deda4932554?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1800,
     content: `
@@ -44,6 +46,7 @@ export const data = [
     id: 3,
     title: "Топ-5 самых распространенных фишинговых атак",
     date: "2024-06-18",
+    img: 'https://images.unsplash.com/photo-1624969862644-791f3dc98927?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 2100,
     content: `
@@ -65,6 +68,7 @@ export const data = [
     id: 4,
     title: "Как распознать поддельные веб-сайты",
     date: "2024-06-15",
+    img: 'https://images.unsplash.com/photo-1481487196290-c152efe083f5?q=80&w=1924&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1700,
     content: `
@@ -85,6 +89,7 @@ export const data = [
     id: 5,
     title: "Смс-фишинг: как не стать жертвой",
     date: "2024-06-10",
+    img: "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     author: "Эксперт по безопасности",
     views: 2000,
     content: `
@@ -106,6 +111,7 @@ export const data = [
     id: 6,
     title: "Как фишинговые атаки воздействуют на бизнес",
     date: "2024-06-08",
+    img: 'https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1500,
     content: `
@@ -127,6 +133,7 @@ export const data = [
     id: 7,
     title: "Электронные письма и фишинг: как не попасться на крючок",
     date: "2024-06-05",
+    img:'https://images.unsplash.com/photo-1557200134-90327ee9fafa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 2200,
     content: `
@@ -148,6 +155,7 @@ export const data = [
     id: 8,
     title: "Фишинг в социальных сетях: как сохранить свои данные",
     date: "2024-06-02",
+    img: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1900,
     content: `
@@ -168,6 +176,7 @@ export const data = [
     id: 9,
     title: "Вишинг: фишинг через телефонные звонки",
     date: "2024-05-30",
+    img: 'https://images.unsplash.com/photo-1463573230746-1049c264?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1600,
     content: `
@@ -189,6 +198,7 @@ export const data = [
     id: 10,
     title: "Фишинговые атаки на мобильные устройства",
     date: "2024-05-28",
+    img: 'https://images.unsplash.com/photo-1504203700686-f21e703e5f1c?q=80&w=2083&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1800,
     content: `
@@ -209,6 +219,7 @@ export const data = [
     id: 11,
     title: "Защита от фишинга: советы для родителей",
     date: "2024-05-25",
+    img: 'https://images.unsplash.com/photo-1514415008039-efa173293080?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1400,
     content: `
@@ -230,6 +241,7 @@ export const data = [
     id: 12,
     title: "Фишинговые атаки на предприятия: меры предосторожности",
     date: "2024-05-23",
+    img: 'https://images.unsplash.com/photo-1620825937374-87fc7d6bddc2?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 2300,
     content: `
@@ -251,6 +263,7 @@ export const data = [
     id: 13,
     title: "Как распознать фишинговые сообщения в мессенджерах",
     date: "2024-05-20",
+    img: 'https://images.unsplash.com/photo-1521931961826-fe48677230a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 2100,
     content: `
@@ -271,6 +284,7 @@ export const data = [
     id: 14,
     title: "Фишинг через рекламу: как не стать жертвой",
     date: "2024-05-18",
+    img: 'https://images.unsplash.com/photo-1508161773455-3ada8ed2bbec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1600,
     content: `
@@ -291,6 +305,7 @@ export const data = [
     id: 15,
     title: "Фишинг через социальные сети: советы для пользователей",
     date: "2024-05-15",
+    img: 'https://images.unsplash.com/photo-1566458383719-239ca2d59a37?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1500,
     content: `
@@ -311,6 +326,7 @@ export const data = [
     id: 16,
     title: "Фишинг через электронную почту: на что обращать внимание",
     date: "2024-05-12",
+    img: 'https://images.unsplash.com/photo-1603791452906-af1740e171bc?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 2000,
     content: `
@@ -332,6 +348,7 @@ export const data = [
     id: 17,
     title: "Фишинговые атаки на мобильные приложения",
     date: "2024-05-10",
+    img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1900,
     content: `
@@ -352,6 +369,7 @@ export const data = [
     id: 18,
     title: "Фишинг и банковские операции: как защитить свои финансы",
     date: "2024-05-08",
+    img: 'https://images.unsplash.com/photo-1635231152717-ec0ae1906271?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1800,
     content: `
@@ -372,6 +390,7 @@ export const data = [
     id: 19,
     title: "Фишинг через социальную инженерию: как не стать жертвой",
     date: "2024-05-05",
+    img: 'https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1700,
     content: `
@@ -393,6 +412,7 @@ export const data = [
     id: 20,
     title: "Фишинговые атаки на онлайн-магазины",
     date: "2024-05-02",
+    img: 'https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1600,
     content: `
@@ -413,6 +433,7 @@ export const data = [
     id: 21,
     title: "Фишинговые атаки на игры и игровые аккаунты",
     date: "2024-04-30",
+    img: 'https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1500,
     content: `
@@ -433,6 +454,7 @@ export const data = [
     id: 22,
     title: "Фишинг через поддельные новости и статьи",
     date: "2024-04-28",
+    img: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     author: "Эксперт по безопасности",
     views: 1400,
     content: `

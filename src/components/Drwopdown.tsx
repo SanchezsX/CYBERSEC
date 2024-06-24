@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-
 const Dropdown = ({
   refInput,
   isVisible,
@@ -11,7 +10,7 @@ const Dropdown = ({
 }: {
   refInput: React.RefObject<HTMLInputElement>
   isVisible: boolean
-  
+
   items: { title: string; date: string; views: number; id: number }[]
 }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -32,6 +31,7 @@ const Dropdown = ({
     }
   }, [refInput.current])
   const dropdownContentRef = useRef<HTMLDivElement>(null)
+
   return createPortal(
     <AnimatePresence>
       {isVisible && (
@@ -47,22 +47,29 @@ const Dropdown = ({
             width: width,
           }}
           ref={dropdownContentRef}
-          className="w-[752px] h-[322px] bg-[#1D1D1D] rounded-[8px] p-4"
+          className="w-[752px] h-[322px] bg-[#282828] rounded-[8px] p-4 overflow-auto"
         >
-          {items.slice(0, 4).map((data) => (
-            <div key={data.id} className="">
-              <Link
-                to={`/post/${data.id}`}
+          {items.length === 0 ? (
+            <div className="text-[#ffff]/40 flex flex-col justify-center h-full items-center">Ничего не найдено...</div>
+          ) : (
+            items.map((data) => (
+              <div
                 key={data.id}
-                className="text-white flex flex-col mb-[26px]"
+                className=""
               >
-                {data.title}
-                <span className="text-[#ffff]/50">
-                  {data.date} / {data.views}
-                </span>
-              </Link>
-            </div>
-          ))}
+                <Link
+                  to={`/post/${data.id}`}
+                  key={data.id}
+                  className="text-white flex flex-col mb-[26px]"
+                >
+                  {data.title}
+                  <span className="text-[#ffff]/50">
+                    {data.date} / {data.views}
+                  </span>
+                </Link>
+              </div>
+            ))
+          )}
         </motion.div>
       )}
     </AnimatePresence>,

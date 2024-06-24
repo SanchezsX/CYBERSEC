@@ -6,13 +6,18 @@ interface PostsProps {
   date: string
   views: number
   id: number
+  img?: string
 }
 
-const Posts = ({ title, date, views, id }: PostsProps) => {
+const Posts = ({ title, date, views, id, img }: PostsProps) => {
   const titleRef = useRef<HTMLParagraphElement>(null)
 
   useEffect(() => {
-    const truncateText = (text: string, lines: number, element: HTMLElement) => {
+    const truncateText = (
+      text: string,
+      lines: number,
+      element: HTMLElement
+    ) => {
       const lineHeight = parseInt(getComputedStyle(element).lineHeight)
       const maxHeight = lineHeight * lines
 
@@ -32,7 +37,7 @@ const Posts = ({ title, date, views, id }: PostsProps) => {
         }
       } else {
         if (titleRef.current) {
-          titleRef.current.textContent = title 
+          titleRef.current.textContent = title
         }
       }
     }
@@ -48,13 +53,18 @@ const Posts = ({ title, date, views, id }: PostsProps) => {
   return (
     <Link to={`/post/${id}`}>
       <div className="mt-[20px] w-full">
-        <img
-          src="/images/bg-white.png"
-          alt="Search"
-          className="w-full"
-        />
-        <div className="bg-[#212121] h-[131px] px-[20px] pt-[20px]">
-          <p ref={titleRef} className="text-white text-[16px] max-[412px]:text-[18px]">
+        <div className="w-full h-[160px] rounded-t-[8px] overflow-hidden">
+          <img
+            src={img}
+            alt="Search"
+            className='size-full object-cover'
+          />
+        </div>
+        <div className="bg-[#212121] h-[131px] px-[20px] pt-[20px] rounded-b-[8px]">
+          <p
+            ref={titleRef}
+            className="text-white text-[16px] max-[412px]:text-[18px]"
+          >
             {title}
           </p>
           <p className="text-[#ABABAB] pt-2 text-[12px] max-[412px]:text-[16px]">

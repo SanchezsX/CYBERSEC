@@ -7,3 +7,15 @@ body {
   @apply bg-[#161616];
   font-family: "Golos Text", sans-serif
 }
+::-webkit-scrollbar {
+  @apply w-[14px];
+}
+
+::-webkit-scrollbar-track {
+  @apply m-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white bg-clip-content border-[5px] border-solid border-transparent rounded-full;
+  @apply hover:bg-white/80 transition-all;
+}

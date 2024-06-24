@@ -8,9 +8,10 @@ function App() {
       <div className="flex flex-col items-center">
         <Search />
       </div>
-      <div className="grid grid-cols-3 gap-4 mt-[50px] max-[600px]:grid-cols-2 max-[412px]:grid-cols-1">
+      <div className="grid grid-cols-3 gap-4 mt-[50px] max-[600px]:grid-cols-2 max-[412px]:grid-cols-1 max-[412px]:mt-[20px]">
         {data.map((data, index) => (
           <Posts
+            img={data.img}
             key={index}
             id={data.id}
             title={data.title}

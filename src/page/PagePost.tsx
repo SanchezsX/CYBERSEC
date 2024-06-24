@@ -10,7 +10,7 @@ const PagePost = ({ items }: { items: typeof data }) => {
   }
 
   return (
-    <div className="text-white mt-[85px] p-5">
+    <div className="text-white mt-[85px] p-5 ">
       <div className="mb-[55px]">
         <h1 className="text-[23px] font-semibold">{post.title}</h1>
         <p className="text-[#A6A6A6] text-[14px]">
