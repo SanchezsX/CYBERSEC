@@ -1,11 +1,27 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ButtonSearch from './ButtonSearch'
-
-import Drwopdown from './Drwopdown'
+import Dropdown from './Drwopdown'
+import { data } from '../data/data'
 
 const Search = () => {
   const [value, setValue] = useState('')
-  const [isOpen, setIsOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+  const [filteredPosts, setFilteredPosts] = useState(data)
+
+  useEffect(() => {
+    if (value.trim() === '') {
+      setFilteredPosts([])
+    } else {
+      setFilteredPosts(
+        data.filter((post) =>
+          post.title.toLowerCase().includes(value.toLowerCase())
+        )
+      )
+    }
+  }, [value])
+
+  const handleVisibility = () => setIsVisible(!isVisible)
+
   const inputContentRef = useRef<HTMLInputElement | null>(null)
   return (
     <div
@@ -18,11 +34,15 @@ const Search = () => {
         placeholder="Search"
         className=" w-[600px] h-[60px] focus:outline-none bg-[#282828] text-white px-4 rounded-[8px]"
         onChange={(e) => setValue(e.target.value)}
-        onFocus={() => setIsOpen(true)}
-        onBlur={() => setIsOpen(false)}
+        onFocus={() => handleVisibility()}
+        onBlur={() => handleVisibility()}
       />
       <ButtonSearch />
-      {isOpen && <Drwopdown refInput={inputContentRef}  />}
+      <Dropdown
+        refInput={inputContentRef}
+        isVisible={isVisible}
+        items={filteredPosts}
+      />
     </div>
   )
 }
