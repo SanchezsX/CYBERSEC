@@ -47,7 +47,7 @@ const Dropdown = ({
             width: width,
           }}
           ref={dropdownContentRef}
-          className="w-[752px] h-[322px] bg-[#282828] rounded-[8px] p-4 overflow-auto"
+          className="w-[752px] max-h-[322px] bg-[#282828] rounded-[8px] p-4 overflow-auto"
         >
           {items.length === 0 ? (
             <div className="text-[#ffff]/40 flex flex-col justify-center h-full items-center">Ничего не найдено...</div>
