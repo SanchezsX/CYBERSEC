@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
+
 const Dropdown = ({
   refInput,
   isVisible,
@@ -10,7 +11,8 @@ const Dropdown = ({
 }: {
   refInput: React.RefObject<HTMLInputElement>
   isVisible: boolean
-  items: { title: string; date: string; views: number }[]
+  
+  items: { title: string; date: string; views: number; id: number }[]
 }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [width, setWidth] = useState(0)
@@ -23,7 +25,7 @@ const Dropdown = ({
     if (dropdownContentRef) {
       const { x, y } = dropdownContentRef.getBoundingClientRect()
 
-      const yPosition = y + inputHeight + 30
+      const yPosition = y + inputHeight + 20
 
       setPosition({ x, y: yPosition })
       setWidth(dropdownContentRef.offsetWidth)
@@ -34,9 +36,9 @@ const Dropdown = ({
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100, transition: { duration: 0.2 } }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
           transition={{ duration: 0.2 }}
           style={{
             position: 'absolute',
@@ -47,11 +49,11 @@ const Dropdown = ({
           ref={dropdownContentRef}
           className="w-[752px] h-[322px] bg-[#1D1D1D] rounded-[8px] p-4"
         >
-          {items.slice(0, 4).map((data, index) => (
-            <div className="">
+          {items.slice(0, 4).map((data) => (
+            <div key={data.id} className="">
               <Link
-                to='/post'
-                key={index}
+                to={`/post/${data.id}`}
+                key={data.id}
                 className="text-white flex flex-col mb-[26px]"
               >
                 {data.title}

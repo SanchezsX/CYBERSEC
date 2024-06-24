@@ -1,4 +1,3 @@
-import Container from '../components/Container'
 import Posts from '../components/Posts'
 import Search from '../components/Search'
 import { data } from '../data/data'
@@ -6,25 +5,20 @@ import { data } from '../data/data'
 function App() {
   return (
     <>
-      <Container width="884px">
-        <div className="flex flex-col items-center">
-          <img
-            className="mt-[50px]"
-            src="/icons/Logo.svg"
-            alt="Search"
+      <div className="flex flex-col items-center">
+        <Search />
+      </div>
+      <div className="grid grid-cols-3 gap-4 mt-[50px] max-[600px]:grid-cols-2 max-[412px]:grid-cols-1">
+        {data.map((data, index) => (
+          <Posts
+            key={index}
+            id={data.id}
+            title={data.title}
+            date={data.date}
+            views={data.views}
           />
-          <Search />
-        </div>
-        <div className="grid grid-cols-3 gap-4 mt-[50px]">
-          {data.map((data) => (
-            <Posts
-              title={data.title}
-              date={data.date}
-              views={data.views}
-            />
-          ))}
-        </div>
-      </Container>
+        ))}
+      </div>
     </>
   )
 }
