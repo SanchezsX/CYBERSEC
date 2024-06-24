@@ -9,7 +9,7 @@ import App from './page/App.tsx'
 import { data } from './data/data.ts'
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/CYBERSEC',
     element: <Layout />,
     children: [
       {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: 'post/:id',
+        path: '/CYBERSEC/post/:id',
         element: <PagePost items={data} />,
       },
     ],
