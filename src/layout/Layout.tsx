@@ -5,10 +5,10 @@ const Layout = () => {
   return (
     <Container width="880px">
       <div className="flex flex-col items-center">
-        <Link  to="/">
+        <Link  to="/CYBERSEC">
           <img
             className="mt-[50px]"
-            src="/icons/Logo.svg"
+            src="./icons/Logo.svg"
             alt="Search"
           />
         </Link>

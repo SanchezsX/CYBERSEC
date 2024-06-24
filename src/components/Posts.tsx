@@ -51,7 +51,7 @@ const Posts = ({ title, date, views, id, img }: PostsProps) => {
   }, [title])
 
   return (
-    <Link to={`/post/${id}`}>
+    <Link to={`/CYBERSEC/post/${id}`}>
       <div className="mt-[20px] w-full">
         <div className="w-full h-[160px] rounded-t-[8px] overflow-hidden">
           <img

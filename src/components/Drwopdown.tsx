@@ -58,7 +58,7 @@ const Dropdown = ({
                 className=""
               >
                 <Link
-                  to={`/post/${data.id}`}
+                  to={`/CYBERSEC/post/${data.id}`}
                   key={data.id}
                   className="text-white flex flex-col mb-[26px]"
                 >
