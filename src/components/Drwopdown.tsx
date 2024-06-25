@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import cn from '../helpers/cn'
 
 const Dropdown = ({
   refInput,
@@ -47,10 +48,19 @@ const Dropdown = ({
             width: width,
           }}
           ref={dropdownContentRef}
-          className="w-[752px] max-h-[322px] bg-[#282828] rounded-[8px] p-4 overflow-auto"
+          className={cn(
+            'shadow-drop bg-[#282828] rounded-[8px] p-4',
+            'w-[752px] max-h-[322px] overflow-auto'
+          )}
         >
           {items.length === 0 ? (
-            <div className="text-[#ffff]/40 flex flex-col justify-center h-full items-center">Ничего не найдено...</div>
+            <div
+              className={cn(
+                'text-[#ffff]/40 flex flex-col justify-center h-full items-center'
+              )}
+            >
+              Ничего не найдено...
+            </div>
           ) : (
             items.map((data) => (
               <div

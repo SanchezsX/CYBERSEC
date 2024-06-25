@@ -19,3 +19,6 @@ body {
   @apply bg-white bg-clip-content border-[5px] border-solid border-transparent rounded-full;
   @apply hover:bg-white/80 transition-all;
 }
+.shadow-drop {
+  box-shadow: 0px 12px 54px 0px rgba(0, 0, 0, 0.15);
+}

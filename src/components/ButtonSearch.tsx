@@ -1,6 +1,13 @@
+import cn from '../helpers/cn'
+
 const ButtonSearch = () => {
   return (
-    <button className="w-[60px] h-[60px] bg-[#2972FF] flex flex-col items-center justify-center rounded-[8px]">
+    <button
+      className={cn(
+        'w-[60px] h-[60px] bg-[#2972FF]  rounded-[8px]',
+        'flex flex-col items-center justify-center'
+      )}
+    >
       <img
         src="./icons/search.svg"
         alt="Search"
