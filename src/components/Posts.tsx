@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import {  motion } from 'framer-motion'
 interface PostsProps {
   title: string
   date: string
@@ -72,7 +72,7 @@ const Posts = ({ title, date, views, id, img }: PostsProps) => {
             {title}
           </p>
           <p className="text-[#ABABAB] pt-2 text-[12px] max-[412px]:text-[16px]">
-            {date} / {views}
+            {date} / {views} просмотров
           </p>
         </div>
       </motion.div>
