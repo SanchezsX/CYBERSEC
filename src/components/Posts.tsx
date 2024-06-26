@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-
+import { AnimatePresence, motion } from 'framer-motion'
 interface PostsProps {
   title: string
   date: string
@@ -52,12 +52,16 @@ const Posts = ({ title, date, views, id, img }: PostsProps) => {
 
   return (
     <Link to={`/CYBERSEC/post/${id}`}>
-      <div className="mt-[20px] w-full">
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="mt-[20px] w-full"
+      >
         <div className="w-full h-[160px] rounded-t-[8px] overflow-hidden">
           <img
             src={img}
             alt="Search"
-            className='size-full object-cover'
+            className="size-full object-cover"
           />
         </div>
         <div className="bg-[#212121] h-[131px] px-[20px] pt-[20px] rounded-b-[8px]">
@@ -71,7 +75,7 @@ const Posts = ({ title, date, views, id, img }: PostsProps) => {
             {date} / {views}
           </p>
         </div>
-      </div>
+      </motion.div>
     </Link>
   )
 }

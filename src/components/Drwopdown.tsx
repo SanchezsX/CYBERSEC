@@ -49,7 +49,7 @@ const Dropdown = ({
           }}
           ref={dropdownContentRef}
           className={cn(
-            'shadow-drop bg-[#282828] rounded-[8px] p-4',
+            'shadow-drop bg-[#282828] rounded-[8px] p-4 border-[1px] border-[#ffff]/10',
             'w-[752px] max-h-[322px] overflow-auto'
           )}
         >

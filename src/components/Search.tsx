@@ -13,7 +13,7 @@ const Search = () => {
       setIsButtonVisible(window.innerWidth >= 600)
     }
     window.addEventListener('resize', handleResize)
-    
+
     handleResize()
     return () => {
       window.removeEventListener('resize', handleResize)
@@ -44,7 +44,7 @@ const Search = () => {
         type="text"
         value={value}
         placeholder="Поиск..."
-        className=" w-[600px] h-[60px] focus:outline-none bg-[#282828] text-white px-4 rounded-[8px]"
+        className=" w-[600px] h-[60px] focus:outline-none bg-[#282828] text-white px-4 rounded-[8px] " 
         onChange={(e) => setValue(e.target.value)}
       />
       {isButtonVisible && <ButtonSearch />}
