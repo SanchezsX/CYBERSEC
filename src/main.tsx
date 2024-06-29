@@ -6,10 +6,10 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import PagePost from './page/PagePost.tsx'
 import Layout from './layout/Layout.tsx'
 import App from './page/App.tsx'
-import { data } from './data/data.ts'
+
 const router = createBrowserRouter([
   {
-    path: '/CYBERSEC',
+    path: '/CYBERSEC/',
     element: <Layout />,
     children: [
       {
@@ -17,12 +17,13 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: '/CYBERSEC/post/:id',
-        element: <PagePost items={data} />,
+        path: 'post/:id',
+        element: <PagePost />,
       },
     ],
   },
-]);
+])
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router} />

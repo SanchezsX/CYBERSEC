@@ -3,6 +3,8 @@ import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import cn from '../helpers/cn'
+import { Models } from 'appwrite'
+import { databases } from '../appwrite'
 
 const Dropdown = ({
   refInput,
@@ -11,11 +13,29 @@ const Dropdown = ({
 }: {
   refInput: React.RefObject<HTMLInputElement>
   isVisible: boolean
-
-  items: { title: string; date: string; views: number; id: number }[]
+  items: Models.Document[]
 }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [width, setWidth] = useState(0)
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    const day = String(date.getDate()).padStart(2, '0')
+    return `${year}-${month}-${day}`
+  }
+
+  const updateViews = async (views: number, id: string) => {
+    await databases.updateDocument(
+      import.meta.env.VITE_DATABASE_ID,
+      import.meta.env.VITE_COLLECTION_ID_POSTS,
+      id,
+      {
+        views: views + 1,
+      }
+    )
+  }
 
   useEffect(() => {
     if (!refInput.current) return
@@ -66,15 +86,19 @@ const Dropdown = ({
               <div
                 key={data.id}
                 className=""
+                onClick={(e) => {
+                  e.preventDefault()
+                  updateViews(data.views, data.$id)
+                }}
               >
                 <Link
-                  to={`/CYBERSEC/post/${data.id}`}
+                  to={`/CYBERSEC/post/${data.$id}`}
                   key={data.id}
                   className="text-white flex flex-col mb-[26px]"
                 >
                   {data.title}
                   <span className="text-[#ffff]/50">
-                    {data.date} / {data.views}
+                    {formatDate(data.$createdAt)} / {data.views}
                   </span>
                 </Link>
               </div>

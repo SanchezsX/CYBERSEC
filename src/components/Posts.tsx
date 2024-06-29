@@ -1,16 +1,28 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef  } from 'react'
 import { Link } from 'react-router-dom'
-import {  motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { databases } from '../appwrite'
 interface PostsProps {
   title: string
   date: string
   views: number
-  id: number
+  id: string
   img?: string
 }
 
 const Posts = ({ title, date, views, id, img }: PostsProps) => {
   const titleRef = useRef<HTMLParagraphElement>(null)
+
+  const updateViews = async () => {
+    await databases.updateDocument(
+      import.meta.env.VITE_DATABASE_ID,
+      import.meta.env.VITE_COLLECTION_ID_POSTS,
+      id,
+      {
+        views: views + 1,
+      }
+    )
+  }
 
   useEffect(() => {
     const truncateText = (
@@ -51,7 +63,10 @@ const Posts = ({ title, date, views, id, img }: PostsProps) => {
   }, [title])
 
   return (
-    <Link to={`/CYBERSEC/post/${id}`}>
+    <Link
+      onClick={updateViews}
+      to={`/CYBERSEC/post/${id}`}
+    >
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}

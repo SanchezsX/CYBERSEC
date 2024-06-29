@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import ButtonSearch from './ButtonSearch'
 import Dropdown from './Drwopdown'
-import { data } from '../data/data'
+import useFetchPosts from '../hooks/useFetchPosts'
+
 
 const Search = () => {
+  const { posts } = useFetchPosts()
   const [value, setValue] = useState('')
   const [isVisible, setIsVisible] = useState(false)
-  const [filteredPosts, setFilteredPosts] = useState(data)
+  const [filteredPosts, setFilteredPosts] = useState(posts)
   const [isButtonVisible, setIsButtonVisible] = useState(true)
   useEffect(() => {
     const handleResize = () => {
@@ -27,7 +29,7 @@ const Search = () => {
     } else {
       setIsVisible(true)
       setFilteredPosts(
-        data.filter((post) =>
+        posts.filter((post) =>
           post.title.toLowerCase().includes(value.toLowerCase())
         )
       )
