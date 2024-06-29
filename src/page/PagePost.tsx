@@ -113,7 +113,7 @@ const PagePost = () => {
       <div className="mb-[55px]">
         <h1 className="text-[23px] font-semibold">{post.title}</h1>
         <p className="text-[#A6A6A6] text-[14px]">
-          {formatDate(post.$createdAt)} / {post.views} просмотров
+          {formatDate(post.$createdAt)} / {post.views} views
         </p>
       </div>
       <p className="text-[23px] max-[750px]:text-[18px]">{post.content}</p>

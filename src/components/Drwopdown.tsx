@@ -79,13 +79,12 @@ const Dropdown = ({
                 'text-[#ffff]/40 flex flex-col justify-center h-full items-center'
               )}
             >
-              Ничего не найдено...
+              nothing found...
             </div>
           ) : (
-            items.map((data) => (
+            items.map((data, index) => (
               <div
                 key={data.id}
-                className=""
                 onClick={(e) => {
                   e.preventDefault()
                   updateViews(data.views, data.$id)
@@ -94,7 +93,7 @@ const Dropdown = ({
                 <Link
                   to={`/CYBERSEC/post/${data.$id}`}
                   key={data.id}
-                  className="text-white flex flex-col mb-[26px]"
+                  className={`text-white flex flex-col ${index === items.length - 1 ? '' : 'mb-[25px]'}`}
                 >
                   {data.title}
                   <span className="text-[#ffff]/50">
