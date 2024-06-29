@@ -45,7 +45,7 @@ const Search = () => {
       <input
         type="text"
         value={value}
-        placeholder="Поиск..."
+        placeholder="Search..."
         className=" w-[600px] h-[60px] focus:outline-none bg-[#282828] text-white px-4 rounded-[8px] " 
         onChange={(e) => setValue(e.target.value)}
       />
