@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: 'post/:id',
+        path: '/CYBERSEC/post/:id',
         element: <PagePost />,
       },
     ],
