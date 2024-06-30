@@ -87,7 +87,7 @@ const Posts = ({ title, date, views, id, img }: PostsProps) => {
             {title}
           </p>
           <p className="text-[#ABABAB] pt-2 text-[12px] max-[412px]:text-[16px]">
-            {date} / {views} views
+            {date} / {views} просмотров
           </p>
         </div>
       </motion.div>

@@ -18,15 +18,14 @@ const useFetchPost = (postId: string) => {
         setPost(response);
       } catch (err) {
         console.log(err);
-        setPost(null);
       } finally {
         setLoading(false);
       }
     };
 
-    if (postId) {
+   
       fetchPost();
-    }
+   
   }, [postId]);
 
   return { post, loading };

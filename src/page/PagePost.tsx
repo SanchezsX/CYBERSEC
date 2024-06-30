@@ -5,8 +5,6 @@ import Skeleton from '../components/Skeleton'
 const PagePost = () => {
   const { id } = useParams()
   const postId = id !== undefined ? id : ''
-
-  console.log('Post ID:', id)
   const { post, loading } = useFetchPost(postId)
 
   if (loading) {
@@ -113,7 +111,7 @@ const PagePost = () => {
       <div className="mb-[55px]">
         <h1 className="text-[23px] font-semibold">{post.title}</h1>
         <p className="text-[#A6A6A6] text-[14px]">
-          {formatDate(post.$createdAt)} / {post.views} views
+          {formatDate(post.$createdAt)} / {post.views} просмотров
         </p>
       </div>
       <p className="text-[23px] max-[750px]:text-[18px]">{post.content}</p>

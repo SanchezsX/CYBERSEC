@@ -79,7 +79,7 @@ const Dropdown = ({
                 'text-[#ffff]/40 flex flex-col justify-center h-full items-center'
               )}
             >
-              nothing found...
+              ничего не найдено...
             </div>
           ) : (
             items.map((data, index) => (
